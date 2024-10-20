@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Warzone Pro Guide - Armas</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS futurista -->
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    h2, h5 {
+      color: #00ffcc;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .navbar {
+      background-color: #0a0a0a;
+      border-bottom: 2px solid #00ffcc;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #00ffcc !important;
+      font-size: 1.8rem;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #00ffcc !important;
+    }
+
+    .list-group-item {
+      background-color: #1a1a1a;
+      color: #fff;
+      border: none;
+      margin-bottom: 10px;
+      padding: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .list-group-item:hover {
+      background-color: #00ffcc;
+      color: #000;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border: 2px solid #00ffcc;
+      border-radius: 15px;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      border-color: #ff00ff;
+      box-shadow: 0px 8px 20px rgba(255, 0, 255, 0.2);
+    }
+
+    .card-title {
+      color: #00ffcc;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .card-text {
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card-img-top:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #0a0a0a;
+      color: #00ffcc;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* Button Styles */
+    .btn-custom {
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #ff00ff;
+      color: #fff;
+      box-shadow: 0px 6px 15px rgba(255, 0, 255, 0.2);
+    }
+  </style>
+
+  <!-- Google Fonts Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">Warzone Pro Guide</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="loadouts.html">Loadouts</a></li>
+          <li class="nav-item"><a class="nav-link" href="comparaciones.html">Comparaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="estrategias.html">Estrategias</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección de Armas -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Armas de Warzone</h2>
+    <div class="row">
+      <!-- Filtro por categoría -->
+      <div class="col-md-3">
+        <h5 class="mb-3">Filtrar por categoría:</h5>
+        <ul class="list-group">
+          <li class="list-group-item" onclick="filterWeapons('rifles')">Rifles de asalto</li>
+          <li class="list-group-item" onclick="filterWeapons('smg')">Subfusiles</li>
+          <li class="list-group-item" onclick="filterWeapons('sniper')">Francotiradores</li>
+        </ul>
+      </div>
+
+      <!-- Lista de Armas -->
+      <div class="col-md-9">
+        <div class="row" id="weapons-list">
+          <!-- Armas serán insertadas aquí dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <p>&copy; 2024 Warzone Pro Guide - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    const weaponsData = {
+      rifles: [
+        { name: 'M4A1', damage: 40, range: 'Medio', rateOfFire: 'Rápida', image: '/assets/img/rifles/1.m4a1.png' },
+        { name: 'AK-47', damage: 50, range: 'Largo', rateOfFire: 'Media', image: '/assets/img/rifles/2.ak-47.png' },
+        { name: 'Kilo 141', damage: 42, range: 'Medio', rateOfFire: 'Rápida', image: '/assets/img/rifles/3.kilo141.webp' },
+        { name: 'CR-56 AMAX', damage: 48, range: 'Largo', rateOfFire: 'Media', image: '/assets/img/rifles/4.cr56amax.webp' },
+        { name: 'FAL', damage: 60, range: 'Largo', rateOfFire: 'Lenta', image: '/assets/img/rifles/FAL-custom-1.webp' },
+        { name: 'Grau 5.56', damage: 45, range: 'Medio', rateOfFire: 'Rápida', image: '/assets/img/rifles/6.grau556.png' },
+        { name: 'Ram-7', damage: 43, range: 'Medio', rateOfFire: 'Rápida', image: '/assets/img/rifles/7.ram7.webp' },
+        { name: 'M13', damage: 38, range: 'Medio', rateOfFire: 'Muy rápida', image: '/assets/img/rifles/8.m13.png' },
+        { name: 'AN-94', damage: 46, range: 'Medio', rateOfFire: 'Media', image: '/assets/img/rifles/9.an94.webp' },
+        { name: 'FARA 83', damage: 49, range: 'Largo', rateOfFire: 'Media', image: '/assets/img/rifles/10.fara83.webp' }
+      ],
+      smg: [
+        { name: 'MP5', damage: 35, range: 'Corto', rateOfFire: 'Muy rápida', image: '../assets/images/smg1.jpg' },
+        { name: 'MP7', damage: 32, range: 'Corto', rateOfFire: 'Muy rápida', image: '../assets/images/smg2.jpg' },
+        { name: 'Uzi', damage: 40, range: 'Medio', rateOfFire: 'Media', image: '../assets/images/smg3.jpg' },
+        { name: 'PP19 Bizon', damage: 38, range: 'Corto', rateOfFire: 'Rápida', image: '../assets/images/smg4.jpg' },
+        { name: 'AUG', damage: 45, range: 'Medio', rateOfFire: 'Lenta', image: '../assets/images/smg5.jpg' },
+        { name: 'Fennec', damage: 34, range: 'Corto', rateOfFire: 'Muy rápida', image: '../assets/images/smg6.jpg' },
+        { name: 'P90', damage: 36, range: 'Corto', rateOfFire: 'Rápida', image: '../assets/images/smg7.jpg' },
+        { name: 'ISO', damage: 33, range: 'Corto', rateOfFire: 'Muy rápida', image: '../assets/images/smg8.jpg' },
+        { name: 'MAC-10', damage: 31, range: 'Corto', rateOfFire: 'Muy rápida', image: '../assets/images/smg9.jpg' },
+        { name: 'OTs 9', damage: 42, range: 'Corto', rateOfFire: 'Muy rápida', image: '../assets/images/smg10.jpg' }
+      ],
+      sniper: [
+        { name: 'HDR', damage: 90, range: 'Muy largo', rateOfFire: 'Lenta', image: '../assets/images/sniper1.jpg' },
+        { name: 'AX-50', damage: 85, range: 'Muy largo', rateOfFire: 'Lenta', image: '../assets/images/sniper2.jpg' },
+        { name: 'Dragunov', damage: 60, range: 'Largo', rateOfFire: 'Media', image: '../assets/images/sniper3.jpg' },
+        { name: 'LW3 Tundra', damage: 92, range: 'Muy largo', rateOfFire: 'Lenta', image: '../assets/images/sniper4.jpg' },
+        { name: 'Pelington 703', damage: 88, range: 'Muy largo', rateOfFire: 'Media', image: '../assets/images/sniper5.jpg' },
+        { name: 'ZRG 20mm', damage: 95, range: 'Muy largo', rateOfFire: 'Lenta', image: '../assets/images/sniper6.jpg' },
+        { name: 'SP-R 208', damage: 80, range: 'Largo', rateOfFire: 'Media', image: '../assets/images/sniper7.jpg' },
+        { name: 'M82', damage: 78, range: 'Largo', rateOfFire: 'Media', image: '../assets/images/sniper8.jpg' },
+        { name: 'Rytec AMR', damage: 85, range: 'Largo', rateOfFire: 'Media', image: '../assets/images/sniper9.jpg' },
+        { name: 'Swiss K31', damage: 87, range: 'Muy largo', rateOfFire: 'Media', image: '../assets/images/sniper10.jpg' }
+      ]
+    };
+
+    function filterWeapons(category) {
+      const weaponsList = document.getElementById('weapons-list');
+      weaponsList.innerHTML = ''; // Limpiar el contenido anterior
+
+      weaponsData[category].forEach(weapon => {
+        const weaponCard = `
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <img src="${weapon.image}" class="card-img-top" alt="${weapon.name}">
+              <div class="card-body">
+                <h5 class="card-title">${weapon.name}</h5>
+                <p class="card-text"><strong>Daño:</strong> ${weapon.damage}</p>
+                <p class="card-text"><strong>Alcance:</strong> ${weapon.range}</p>
+                <p class="card-text"><strong>Cadencia de fuego:</strong> ${weapon.rateOfFire}</p>
+              </div>
+            </div>
+          </div>
+        `;
+        weaponsList.insertAdjacentHTML('beforeend', weaponCard);
+      });
+    }
+
+    // Mostrar rifles de asalto por defecto al cargar la página
+    window.onload = function() {
+      filterWeapons('rifles');
+    };
+  </script>
+</body>
+</html>

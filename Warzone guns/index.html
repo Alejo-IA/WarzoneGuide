@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Warzone Pro Guide - Inicio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    h1, h2 {
+  color: #00ffcc;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+}
+
+
+    p {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .navbar {
+      background-color: #0a0a0a;
+      border-bottom: 2px solid #00ffcc;
+      transition: background-color 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #00ffcc !important;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #00ffcc !important;
+    }
+
+    .navbar:hover {
+      background-color: #0e0e0e;
+    }
+
+    .btn-custom {
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #ff00ff;
+      color: #fff;
+    }
+
+    /* Animaciones y estilos para Hero Section */
+    .hero {
+      padding: 100px 0;
+      background: url('assets/img/background/back.jpg') no-repeat center center/cover; /* Cambiado a tu imagen */
+      animation: fadeIn 2s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      animation: slideDown 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    .btn {
+      margin: 10px;
+      transition: transform 1.3s ease;
+      background-color: #00fbff;
+      color: #fff;
+    }
+
+    .btn:hover {
+      transform: scale(1.55);
+      background-color: #ff00ff;
+      color: #fff;
+    }
+
+    /* Sección de características */
+    .features-section {
+      padding: 60px 0;
+      background-color: #141414;
+    }
+
+    .feature-box {
+      padding: 30px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      background-color: #00ffcc;
+      color: #000;
+    }
+
+    .feature-box img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #0a0a0a;
+      color: #00ffcc;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* Keyframes para animaciones */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Warzone Pro Guide</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/loadouts.html">Loadouts</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/comparaciones.html">Comparaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/estrategias.html">Estrategias</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-white text-center">
+    <div class="container">
+      <h1>Domina Warzone como un Pro</h1>
+      <p>Las mejores armas, loadouts y estrategias al alcance de tu mano.</p>
+      <a href="pages/armas.html" class="btn btn-primary btn-lg">Explorar Armas</a>
+      <a href="pages/loadouts.html" class="btn btn-outline-light btn-lg">Ver Loadouts</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section text-center">
+    <div class="container">
+      <h2>¿Qué Ofrecemos?</h2>
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <img src="assets/img/smg/gunsss.png" alt="Armas">
+            <h3>Guías de Armas</h3>
+            <p>Conoce las mejores armas y sus estadísticas detalladas.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <img src="assets/img/smg/colombia.jpg" alt="Loadouts">
+            <h3>Mejores Loadouts</h3>
+            <p>Configura tu equipo ideal para arrasar en cada partida.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <img src="assets/img/smg/allgun.jpg" alt="Comparaciones">
+            <h3>Comparaciones</h3>
+            <p>Compara armas y estrategias para elegir la mejor opción.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Suscríbete Section -->
+<section class="subscription-section text-center" style="padding: 60px 0; background-color: #141414;">
+  <div class="container">
+    <h2 style="color: #00ffcc;">¡Suscríbete para recibir noticias y actualizaciones!</h2>
+    <p style="color: #fff;">Recibe la información más reciente sobre las mejores armas y estrategias en Warzone.</p>
+    <form action="#" method="post" style="margin-top: 20px;">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Ingresa tu nombre" aria-label="Nombre" required>
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico" aria-label="Correo electrónico" required>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="preferences" class="form-label" style="color: #fff;">¿Qué contenido te interesa?</label>
+        <select class="form-select" id="preferences" required>
+          <option value="" disabled selected>Selecciona tus preferencias</option>
+          <option value="armas">Armas y Loadouts</option>
+          <option value="estrategias">Estrategias de Juego</option>
+          <option value="actualizaciones">Actualizaciones de Juegos</option>
+          <option value="todos">Todos los contenidos</option>
+        </select>
+      </div>
+      <button class="btn btn-custom" type="submit">Suscribirse</button>
+    </form>
+  </div>
+</section>
+
+
+  
+  <!-- Footer -->
+  <footer class="text-white text-center">
+    <p>&copy; 2024 Warzone Pro Guide - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Warzone Pro Guide - Estrategias</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    h1, h2 {
+      color: #00ffcc;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .navbar {
+      background-color: #0a0a0a;
+      border-bottom: 2px solid #00ffcc;
+      transition: background-color 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #00ffcc !important;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #00ffcc !important;
+    }
+
+    .navbar:hover {
+      background-color: #0e0e0e;
+    }
+
+    /* Animaciones */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Estilo del modal */
+    .modal-content {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #0a0a0a;
+      color: #00ffcc;
+      padding: 20px 0;
+    }
+
+    .manual-section {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+
+    .manual-section:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Warzone Pro Guide</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="armas.html">Armas</a></li>
+            <li class="nav-item"><a class="nav-link" href="loadouts.html">Loadouts</a></li>
+            <li class="nav-item"><a class="nav-link" href="comparaciones.html">Comparaciones</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../pages/estrategias.html">Estrategias</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal para Términos y Condiciones -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsModalLabel">Términos y Condiciones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Por favor, confirma que tienes 18 años o más y acepta los términos y condiciones para continuar.</p>
+          <form id="ageForm">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="ageCheck" required>
+              <label class="form-check-label" for="ageCheck">
+                Confirmo que tengo 18 años o más.
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-custom" id="acceptTerms">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <section class="container my-5 fade-in">
+    <h1>Estrategias de Manejo de Armas</h1>
+    <p>Bienvenido a nuestra guía sobre estrategias de manejo de armas. Aquí encontrarás manuales y recomendaciones para mejorar tus habilidades en el campo de batalla.</p>
+
+    <h2>Catálogo de Conducta de Manejo de Armas Internacional</h2>
+    <div class="manual-section">
+      <h3>Reglas Importantes</h3>
+      <p>1. Siempre maneja tu arma como si estuviera cargada.<br>
+         2. Nunca apuntes a algo que no estás dispuesto a destruir.<br>
+         3. Mantén el dedo fuera del gatillo hasta que estés listo para disparar.<br>
+         4. Conoce tu objetivo y lo que hay detrás de él.<br>
+         5. Usa protección ocular y auditiva al disparar.</p>
+    </div>
+
+    <h2>Manual de Uso de Armas Cortas</h2>
+    <div class="manual-section">
+      <h3>Uso Efectivo de Armas Cortas</h3>
+      <p>Las armas cortas son ideales para el combate cercano. Asegúrate de practicar el manejo de tu arma en entornos controlados. Aquí te dejamos algunos consejos:</p>
+      <p>- Mantén una postura firme y equilibrada.<br>
+         - Alinea la mira con tu objetivo.<br>
+         - Realiza disparos en ráfaga para mayor control.<br>
+         - Practica la recarga rápida y segura.</p>
+    </div>
+
+    <h2>Manual de Uso de Armas Largas</h2>
+    <div class="manual-section">
+      <h3>Uso Efectivo de Armas Largas</h3>
+      <p>Las armas largas son útiles en situaciones de largo alcance. Para maximizar su efectividad:</p>
+      <p>- Usa un soporte para estabilizar tu tiro.<br>
+         - Ajusta la mira a la distancia de tu objetivo.<br>
+         - Practica la respiración controlada para un disparo preciso.<br>
+         - Familiarízate con las características de tu arma y sus accesorios.</p>
+    </div>
+
+    <h2>Manual de Uso de Explosivos</h2>
+    <div class="manual-section">
+      <h3>Uso Seguro de Explosivos</h3>
+      <p>Los explosivos pueden cambiar el rumbo de un conflicto. Sigue estas pautas para su uso:</p>
+      <p>- Mantén siempre los explosivos fuera del alcance de personas no autorizadas.<br>
+         - Asegúrate de conocer el área antes de detonar.<br>
+         - Practica la evacuación segura en caso de fallos.<br>
+         - Usa equipo de protección adecuado durante el manejo.</p>
+    </div>
+
+    <h2>Supervivencia en la Guerra Urbana</h2>
+    <div class="manual-section">
+      <h3>Estrategias de Supervivencia</h3>
+      <p>La guerra urbana presenta desafíos únicos. Aquí hay algunas estrategias:</p>
+      <p>- Conoce el terreno y los edificios.<br>
+         - Usa el entorno a tu favor (cubrirse detrás de objetos, etc.).<br>
+         - Establece rutas de escape.<br>
+         - Mantén la comunicación con tus compañeros.</p>
+    </div>
+
+    <h2>Supervivencia en la Guerra de Guerrillas</h2>
+    <div class="manual-section">
+      <h3>Estrategias de Guerrilla</h3>
+      <p>En un conflicto de guerrillas, la movilidad y la sorpresa son clave:</p>
+      <p>- Utiliza tácticas de hit-and-run.<br>
+         - Mantén la comunicación constante.<br>
+         - Aprovecha la vegetación y el terreno para ocultarte.<br>
+         - Establece bases temporales para descansar y reabastecerte.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-white text-center">
+    <p>&copy; 2024 Warzone Pro Guide - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    // Script para manejar el modal de términos y condiciones
+    document.getElementById('acceptTerms').addEventListener('click', function() {
+      if (document.getElementById('ageCheck').checked) {
+        alert("¡Bienvenido! Puedes continuar navegando en el sitio.");
+        $('#termsModal').modal('hide');
+      } else {
+        alert("Por favor, acepta los términos para continuar.");
+      }
+    });
+  </script>
+</body>
+</html>

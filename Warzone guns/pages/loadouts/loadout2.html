@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Detalles del Loadout 2 - AK-47 & RPG-7</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    h2 {
+      color: #00ffcc;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .navbar {
+      background-color: #0a0a0a;
+      border-bottom: 2px solid #00ffcc;
+      transition: background-color 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #00ffcc !important;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #00ffcc !important;
+    }
+
+    .navbar:hover {
+      background-color: #0e0e0e;
+    }
+
+    .loadout-card {
+      background-color: #1a1a1a;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .loadout-card:hover {
+      transform: scale(1.05);
+      background-color: #00ffcc;
+      color: #000;
+    }
+
+    .loadout-card img {
+      width: 40%;
+      object-fit: cover;
+      transition: filter 0.3s ease;
+    }
+
+    .loadout-card:hover img {
+      filter: grayscale(50%);
+    }
+
+    .loadout-info {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .loadout-info h5 {
+      color: #00ffcc;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .loadout-info p {
+      font-size: 1.2rem;
+    }
+
+    .btn-custom {
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .btn-custom:hover {
+      background-color: #ff00ff;
+      color: #fff;
+    }
+
+    /* Animaciones */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .loadout-card {
+      animation: fadeInUp 1s ease;
+    }
+
+    .progress-bar-custom {
+      background-color: #00ffcc;
+      transition: width 1s ease;
+    }
+
+    .progress-bar-custom.anim {
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .weapon-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .weapon {
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .weapon img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">Warzone Pro Guide</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../armas.html">Armas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="../loadouts.html">Loadouts</a></li>
+          <li class="nav-item"><a class="nav-link" href="../comparaciones.html">Comparaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="/pages\estrategias.html">Estrategias</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Detalles del Loadout -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Detalles del Loadout 2: AK-47 & RPG-7</h2>
+
+    <!-- Contenedor de armas -->
+    <div class="weapon-container">
+     
+        <!-- Arma principal: AK-47 -->
+      <div class="weapon">
+        <h3>AK - 47</h3>
+        <img src="/assets/img/rifles/2.ak-47.png" alt="AK-47">
+        <div class="weapon-details">
+          <ul>
+            <li><strong>Daño:</strong> 42 (al cuerpo), 120 (a la cabeza)</li>
+            <li><strong>Cadencia de fuego:</strong> 600 RPM</li>
+            <li><strong>Alcance efectivo:</strong> 300 metros</li>
+            <li><strong>Velocidad de bala:</strong> 715 m/s</li>
+            <li><strong>Cargador estándar:</strong> 30 balas</li>
+            <li><strong>Recoil:</strong> Alto</li>
+            <li><strong>Precisión:</strong> Moderada</li>
+          </ul>
+        </div>
+      </div>
+
+
+       <!-- Arma secundaria: RPG-7 -->
+       <div class="weapon">
+        <h3>RPG - 7</h3>
+        <img src="/assets/img/rifles/12.rpg7.png" alt="RPG-7">
+        <div class="weapon-details">
+          <ul>
+            <li><strong>Daño:</strong> 100 (al cuerpo), 250 (a la cabeza)</li>
+            <li><strong>Cadencia de fuego:</strong> 20 RPM</li>
+            <li><strong>Alcance efectivo:</strong> 200 metros</li>
+            <li><strong>Cargador estándar:</strong> 1 proyectil (recarga manual)</li>
+            <li><strong>Recoil:</strong> Muy alto</li>
+            <li><strong>Precisión:</strong> Baja</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra de progreso para algunas estadísticas -->
+    <h3 class="text-center">Comparación de estadísticas</h3>
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <p>Precisión AK-47</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-custom anim" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <p>Precisión RPG-7</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-custom anim" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4">
+        <p>Recoil AK-47</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-custom anim" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="col-md-6 mt-4">
+        <p>Recoil RPG-7</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-custom anim" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
